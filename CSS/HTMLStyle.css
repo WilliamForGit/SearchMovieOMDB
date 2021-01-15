@@ -1,0 +1,42 @@
+.menu
+{
+    cursor:pointer;
+    width: 260px; 
+    height: 300px;    
+}
+
+#imgMenu
+{
+    width: 400px; 
+    height: 380px;
+}
+
+
+.menu_list
+{
+    width: 120px;
+    height: 100px;
+}
+
+.card{
+    width: 90%;
+    height: 600px;
+    margin: 0;
+    background: var(--grayback);
+    border-radius: 10px;
+    overflow: hidden;  /* to crop image inside rounded div*/
+    position: relative;
+    max-width: 400px;
+    box-shadow: var(--shadow)
+}
+
+.card-image{
+    width: 100%;
+    vertical-align: middle;
+    object-fit: cover;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    max-width: 800px;
+    transition: transform 0.4s;
+}
