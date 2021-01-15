@@ -17,17 +17,10 @@
 <body>
 
 <header>
-  <h2>My First Bootstrap Page</h2>
-  <p>Resize this responsive page to see the effect!</p> 
+  <h2>Search movies from OMDB</h2>
+  <p>One website to search information of movies from OMDB API</p> 
   <div>
-  <nav>
-    <strong>
-      <a href="HomePage.html">Home</a> &nbsp;&nbsp;
-      <a href="history.html">History</a>&nbsp;&nbsp;
-      <a href="future.html">Future</a>&nbsp;&nbsp;
-      <a href="shoplist.html">Shop List</a>&nbsp;&nbsp;  
-    </strong>                     
-  </nav>
+  
 
   </div>    
 
@@ -35,25 +28,25 @@
 
 <section class="col-12 col-s-12" style="text-align: center;"> 
   <h1>Movie</h1>
+  <div class="container">
+    <p class="search">Search Movie </p>
+    <form action="/results" method="GET">
+        <input type="text" placeholder="Enter Movie name or keyword" name="movie" required>
+        <input type="Submit" value="Find">
+    </form>
+</div>
+
   <button id="search">Search Movie</button>
     
  
-  <div id="divMovies">
-
-    
-  </div>
-  <p id="pText"></p>
-  <hr>
-  <!-- About Section -->
+  <div id="divMovies" class="container">
   
+  
+  </div>
+
 </section>
 
-<footer>
-  <p>
-    ABCD
-  </p>
-</footer>
 
-<script type="text/javascript" src="Javascript/movielist.js"></script>
+<script type="text/javascript" src="JavascriptFiles/movielist.js"></script>
 </body>
 </html>

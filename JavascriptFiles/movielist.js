@@ -24,14 +24,20 @@ $(document).ready(function(){
             
             if(item.Poster != 'N/A')
             {
-              movieText += " <img class='menu' src='" + item.Poster + "'><p>";
+              movieText += "<div class='card'><div class='card-image-box'> <img class='card-image' src='" + item.Poster + "'></div>"+
+              "<div class='card-description'>"+
+              "<a><p class='card-title'>"+ item.Title +"</p></a>"+            
+              "<p><span class='topic'>Type: </span> &nbsp;"+ item.Type +"</p>"+ 
+              "<p><span class='topic'>Year: </span> &nbsp;"+ item.Year +"</p></div></div>";            
             }
             else{
-              movieText += " <img class='menu' src='/images/No_image_available.png'><p>";
+              movieText += "<div class='card-image-box'> <img class='card-image' src='/images/No_image_available.png'></div>";
             }
                        
           });
 
+          
+          
           document.getElementById("divMovies").innerHTML= movieText;
           
           console.log(movieText);
