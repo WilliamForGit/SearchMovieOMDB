@@ -1,15 +1,22 @@
 
-
 function setPageInfo()
 {   
+  var url = document.location.search;
+  var urlList = url.split('=');  //“=” means obtain the value efter the symbol "=" 
+  var keyword = urlList[urlList.length-1].split('.')[0];
 
- var url = document.location.search;
- var urlList = url.split('=');  //“=” means obtain the value efter the symbol "=" 
- var keyword = urlList[urlList.length-1].split('.')[0];
-
- setMovieList(keyword.trim());
-    
+  setMovieList(keyword.trim());    
 }  
+
+function searchMovie()
+{
+  var txtKey =  document.getElementById("txtKeyWord");
+  var keyWord = txtKey.value;
+  console.log(keyWord);
+
+  setMovieList(keyWord);
+  txtKey.value="";
+}
 
 function setMovieList(keyword)
 {
@@ -24,16 +31,19 @@ function setMovieList(keyword)
   
      movieRequest.onreadystatechange = function () {
          if (movieRequest.readyState==4 && movieRequest.status==200) {
-          
-
-         
+                  
             movieData = JSON.parse(movieRequest.responseText);
-           if(movieData.Response !="False")
+            console.log(movieData);
+
+            console.log(movieData.Response);
+
+           if(movieData.Response=='False') //OMDB return en 'Response' as a bool object to show if there resluts match the search key word.
            {
-             console.log(movieData);
-             //console.log(movieData.Search);
-             
-             movieData.Search.forEach((item) => {
+            document.getElementById("divMovies").innerHTML="";
+            document.getElementById("pError").innerHTML= movieData.Error;      //OMDB API return en 'movieData.Error'         
+           }
+           else{
+             movieData.Search.forEach((item) => {  // movieData.Search is en JSON array from OMDB API
                           
               if(item.Poster != 'N/A')
               {
@@ -50,17 +60,13 @@ function setMovieList(keyword)
             });
   
             document.getElementById("divMovies").innerHTML= movieText;
-          //}
-          //else{
-           // document.getElementById("pError").innerHTML="There no movies match your search word, please enter again!";
-          //}
-          
           }
-     }  
-  
-     movieRequest.open('GET', URL);
-     movieRequest.send(); 
-  
+          
+          }       
+        }
+        movieRequest.open('GET', URL);
+        movieRequest.send(); 
+      
     });
   
 }
