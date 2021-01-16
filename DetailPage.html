@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Detail of the movie</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>  
+
+  <link rel="stylesheet" type="text/css" href="CSS/HTMLStyle.css">
+  <link rel="stylesheet" type="text/css" href="CSS/Layout.css">
+  <link rel="stylesheet" type="text/css" href="CSS/ResponsivLayout.css">
+</head>
+
+<body onload="setMovieInfo()">
+
+<header>
+  <h2>Search movies from OMDB</h2>
+  <p>One website to search information of movies from OMDB API</p> 
+</header>
+
+<section class="col-12 col-s-12" style="text-align: center;">      
+ 
+    <div class="big-card">
+        <div class="movie-data">             
+            <img id="imgPicture" class="main-image" src="" onerror="this.src ='https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQkmpiE3saxLv17jlQVpffuUAAtU95HJoaPRw&usqp=CAU'">
+        
+            <div class="movie-details"> 
+                <p id="pTitle" class="movie-title"></p>   
+                <div class="movie-inside">
+                    <p id="pRating" class="card-rating"><span id="topic">IMDB rating: </span><i class="fas fa-star"></i> <span class="rating"></span></p>
+                    <p id="pType" class="movie-type">Type: &nbsp;</p>
+                    <p id="pGenre" class="movie-genre">Genre: &nbsp;</p>
+                    <p id="pLanguage" class="movie-lang">Language: &nbsp;</p>
+                    <span id="topic">Plot:</span><br><p id="plot" class="movie-plot"></p>
+                    <p id="pReleaseDate" class="movie-release">Release date: &nbsp;</p>
+                    <p id="pDirector" class="movie-director">Director: &nbsp;</p>
+                    <p id="pActors" class="movie-cast">Actors: &nbsp;</p>
+                </div> 
+                     
+            </div>
+        </div>
+        
+        
+    </div>
+
+  <p id="pError"></p>
+
+</section>
+
+
+<script type="text/javascript" src="JavascriptFiles/movieDetail.js"></script>
+</body>
+</html>

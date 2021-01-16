@@ -23,7 +23,7 @@ function setMovieList(keyword)
   var APIKEY = 'ced10e13';
   $(document).ready(function(){   
      
-    var URL = "http://www.omdbapi.com/?apikey=ced10e13&s="+keyword+"&type=movie";
+    var URL = "http://www.omdbapi.com/?apikey="+APIKEY+"&s="+keyword+"&type=movie";
  
      let movieRequest = new XMLHttpRequest;     
      let movieData;
@@ -33,9 +33,9 @@ function setMovieList(keyword)
          if (movieRequest.readyState==4 && movieRequest.status==200) {
                   
             movieData = JSON.parse(movieRequest.responseText);
-            console.log(movieData);
+            //console.log(movieData);
 
-            console.log(movieData.Response);
+            //console.log(movieData.Response);
 
            if(movieData.Response=='False') //OMDB return en 'Response' as a bool object to show if there resluts match the search key word.
            {
@@ -49,7 +49,7 @@ function setMovieList(keyword)
               {
                 movieText += "<div class='card'><div class='card-image-box'> <img class='card-image' src='" + item.Poster + "'></div>"+
                 "<div class='card-description'>"+
-                "<a><p class='card-title'>"+ item.Title +"</p></a>"+            
+                "<a href='DetailPage.html?movieID="+ item.imdbID  +"'><p class='card-title'>"+ item.Title +"</p></a>"+            
                 "<p><span class='topic'>Type: </span> &nbsp;"+ item.Type +"</p>"+ 
                 "<p><span class='topic'>Year: </span> &nbsp;"+ item.Year +"</p></div></div>";            
               }
