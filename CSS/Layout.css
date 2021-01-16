@@ -1,11 +1,10 @@
 header
 {
-    background-image: url(../images/header03.jpg);  
     background-repeat: no-repeat;
     background-position: center;    
     color: rgb(24, 179, 45);  
     text-align: center; 
-    height: 180px;
+    height: 200px;
 }
 
 footer{

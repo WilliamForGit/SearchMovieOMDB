@@ -14,24 +14,32 @@
   <link rel="stylesheet" type="text/css" href="CSS/ResponsivLayout.css">
 </head>
 
-<body>
+<body onload="setPageInfo()">
 
 <header>
   <h2>Search movies from OMDB</h2>
   <p>One website to search information of movies from OMDB API</p> 
-  
+  <div>  
+  <button id="search">Search Movie</button>
+  </div>    
+<div>   
+    <form action="/results" method="GET">
+        <input type="text" placeholder="Enter Movie name or keyword" name="movie" required>
+        <input type="Submit" value="Find">
+    </form>
+</div>
 </header>
 
 <section class="col-12 col-s-12" style="text-align: center;">      
  
-  <div>   
-    <form action="/SearchMovieOMDB/SearchPage.html" method="GET">
-        <input type="text" placeholder="Please enter a movie name or keyword" name="movie" required>
-        <input type="Submit" value="Find">
-    </form> 
+  <div id="divMovies" class="container">  
+  
   </div>
 
+  <p id="pError"></p>
+
 </section>
+
 
 <script type="text/javascript" src="JavascriptFiles/movielist.js"></script>
 </body>
