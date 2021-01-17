@@ -9,25 +9,21 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>  
 
-  <link rel="stylesheet" type="text/css" href="CSS/HTMLStyle.css">
+  <link rel="stylesheet" type="text/css" href="CSS/HomePage.css">
   <link rel="stylesheet" type="text/css" href="CSS/Layout.css">
   <link rel="stylesheet" type="text/css" href="CSS/ResponsivLayout.css">
 </head>
 
 <body>
+<div class="hompageback"></div>
+<div class="logo"> <a href="#"><i class="fas fa-video"></i>Search Movies From OMDB</a></div>
 
-<header>
-  <h2>Search movies from OMDB</h2>
-  <p>One website to search information of movies from OMDB API</p> 
-  
-</header>
-
-<section class="col-12 col-s-12" style="text-align: center;">      
+<section style="text-align: center;">      
  
-  <div>   
+  <div class="container">
+    <p class="search">Search Movie </p>   
     <form action="/SearchMovieOMDB/SearchPage.html" method="GET">
-        <input type="text" placeholder="Please enter a movie name or keyword" name="movie" required>
-        <input type="Submit" value="Find">
+        <input type="text" placeholder="Please enter a movie name or keyword" name="movie" required > &nbsp;&nbsp;&nbsp;&nbsp; <input type="Submit" value="Search" >
     </form> 
   </div>
 

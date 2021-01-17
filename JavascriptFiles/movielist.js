@@ -11,8 +11,7 @@ function setPageInfo()
 function searchMovie()
 {
   var txtKey =  document.getElementById("txtKeyWord");
-  var keyWord = txtKey.value;
-  console.log(keyWord);
+  var keyWord = txtKey.value;  
 
   setMovieList(keyWord);
   txtKey.value="";
@@ -20,14 +19,17 @@ function searchMovie()
 
 function setMovieList(keyword)
 {
-  var APIKEY = 'ced10e13';
+  var APIKEY = 'ced10e13';  //this is a my own API KEY for OMDB
+  
+
   $(document).ready(function(){   
-     
+    document.getElementById("pSearcWord").innerHTML= keyword.toString();  //to show the key word on the page
     var URL = "http://www.omdbapi.com/?apikey="+APIKEY+"&s="+keyword+"&type=movie";
  
      let movieRequest = new XMLHttpRequest;     
      let movieData;
      var movieText="";
+     
   
      movieRequest.onreadystatechange = function () {
          if (movieRequest.readyState==4 && movieRequest.status==200) {
@@ -60,6 +62,7 @@ function setMovieList(keyword)
             });
   
             document.getElementById("divMovies").innerHTML= movieText;
+            document.getElementById("pError").innerHTML="";
           }
           
           }       

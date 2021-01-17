@@ -1,19 +1,2 @@
-header
-{
-    background-repeat: no-repeat;
-    background-position: center;    
-    color: rgb(24, 179, 45);  
-    text-align: center; 
-    height: 200px;
-}
 
-footer{
-    float: bottom;
-    clear: both;
-    width:99%;    
-    background-color: rgb(93, 185, 93);
-    height: 100px;  
-    text-align: center;
-    padding-top: 10px; 
-}
 

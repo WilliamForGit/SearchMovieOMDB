@@ -12,29 +12,27 @@
   <link rel="stylesheet" type="text/css" href="CSS/HTMLStyle.css">
   <link rel="stylesheet" type="text/css" href="CSS/Layout.css">
   <link rel="stylesheet" type="text/css" href="CSS/ResponsivLayout.css">
+
+  <link rel="stylesheet" type="text/css" href="CSS/SearchStyle.css">
 </head>
 
 <body onload="setPageInfo()">
 
 <header>
-  <h2>Search movies from OMDB</h2>
-  <p>One website to search information of movies from OMDB API</p> 
-  
-<div>   
-    
-        <input type="text" id="txtKeyWord" placeholder="Enter Movie name or keyword" required>
-        <button id="search" onclick="searchMovie()">Search Movie</button>
-        
-   
+    <div id="navbar">
+
+    <div class="brand"><a href="/SearchMovieOMDB/HomePage.html"><i class="fas fa-video"></i> Search Movies From OMDB </a></div>
+    <div class="search">
+    <input class="movie-input" type="text" id="txtKeyWord" placeholder="Enter Movie name or keyword" required>&nbsp;&nbsp;
+    <button id="search" onclick="searchMovie()">Search</button>
+    </div>
 </div>
+
 </header>
 
 <section class="col-12 col-s-12" style="text-align: center;">      
- 
-  <div id="divMovies" class="container">  
-  
-  </div>
-
+  <span>Resluts with the search word: </span><span id="pSearcWord"></span>
+  <div id="divMovies" class="container"></div>  
   <p id="pError"></p>
 
 </section>
