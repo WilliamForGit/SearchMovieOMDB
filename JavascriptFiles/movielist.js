@@ -1,11 +1,23 @@
 
+
 function setPageInfo()
 {   
   var url = document.location.search;
   var urlList = url.split('=');  //“=” means obtain the value efter the symbol "=" 
   var keyword = urlList[urlList.length-1].split('.')[0];
 
-  setMovieList(keyword.trim());    
+  var sWord = document.getElementById("pSearcWord");
+
+  console.log(sWord.value);
+
+  if(sWord.value!='')
+  {
+    setMovieList(keyword.trim());  
+  }
+  else{
+    setMovieList(sWord.value);
+  }
+   
 }  
 
 function searchMovie()
@@ -20,10 +32,11 @@ function searchMovie()
 function setMovieList(keyword)
 {
   var APIKEY = 'ced10e13';  //this is a my own API KEY for OMDB
-  
+  document.getElementById("pSearcWord").innerHTML= keyword.toString();   //to show the key word on the page
+  document.getElementById("pSearcWord").value= keyword.toString();   //to show the key word on the page
 
   $(document).ready(function(){   
-    document.getElementById("pSearcWord").innerHTML= keyword.toString();  //to show the key word on the page
+   
     var URL = "http://www.omdbapi.com/?apikey="+APIKEY+"&s="+keyword+"&type=movie";
  
      let movieRequest = new XMLHttpRequest;     

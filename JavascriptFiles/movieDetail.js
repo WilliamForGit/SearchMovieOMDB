@@ -4,8 +4,6 @@ function setMovieInfo()
   var urlList = url.split('=');  //“=” means obtain the value efter the symbol "=" 
   var movieID = urlList[urlList.length-1].split('.')[0];
 
-  console.log(movieID);
-
   setMovieDetail(movieID);    
 }  
 
@@ -38,20 +36,13 @@ var movieActors = document.getElementById("pActors");
          if (movieRequest.readyState==4 && movieRequest.status==200) {
                   
             data = JSON.parse(movieRequest.responseText);
-            console.log(data);
-
-            console.log(data.Response);
-
+           
            if(data.Response=='False') //OMDB return en 'Response' as a bool object to show if there resluts match the search key word.
            {
             
             document.getElementById("pError").innerHTML= movieData.Error;      //OMDB API return en 'movieData.Error'         
            }
-           else{
-
-            //let poster = data[i]['Poster'];
-            // Movie details in preview card
-            
+           else{                      
             movieImage.setAttribute('src', data.Poster);
             movieTitle.textContent = data.Title;
             movieRating.textContent = data.imdbRating; 
