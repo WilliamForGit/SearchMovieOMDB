@@ -8,6 +8,8 @@
   
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 
   <link rel="stylesheet" type="text/css" href="CSS/HomePage.css">
   <link rel="stylesheet" type="text/css" href="CSS/Layout.css">
@@ -16,19 +18,19 @@
 
 <body>
 <div class="hompageback"></div>
-<div class="logo"> <a href="#"><i class="fas fa-video"></i>Search Movies From OMDB</a></div>
+<div class="logo"> <a href="#">Search Movies From OMDB</a></div>
 
 <section style="text-align: center;">      
  
-  <div class="container">
+  <div class="divContainer">
     <p class="search">Search Movie </p>   
     <form action="/SearchMovieOMDB/SearchPage.html" method="GET">
-        <input type="text" placeholder="Please enter a movie name or keyword" name="movie" required > &nbsp;&nbsp;&nbsp;&nbsp; <input type="Submit" value="Search" >
+        <input type="text" placeholder="Please enter a movie name or keyword" name="movie" required > &nbsp;&nbsp;&nbsp;&nbsp;<button type="submit" value="Search"><i class="fa fa-search"></i></button> 
+         
     </form> 
   </div>
 
 </section>
 
-<script type="text/javascript" src="JavascriptFiles/movielist.js"></script>
 </body>
 </html>

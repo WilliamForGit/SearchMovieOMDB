@@ -6,25 +6,12 @@ function setPageInfo()
   var urlList = url.split('=');  //“=” means obtain the value efter the symbol "=" 
   var keyword = urlList[urlList.length-1].split('.')[0];
   setMovieList(keyword.trim()); 
-
-  console.log(document.getElementById("pSearcWord").innerHTML);
-
-  /*
-  if(sWord.innerHTML!='')
-  {
-    setMovieList(keyword.trim());  
-  }
-  else{
-    setMovieList(sWord.innerHTML);
-  }
-  */
-   
 }  
 
 function searchMovie()
 {
   var txtKey =  document.getElementById("txtKeyWord");
-  var keyWord = txtKey.value;  
+  var keyWord = txtKey.value;
 
   setMovieList(keyWord);
   txtKey.value="";
@@ -35,8 +22,7 @@ function searchMovie()
 function setMovieList(keyword)
 {
   var APIKEY = 'ced10e13';  //this is a my own API KEY for OMDB
-  document.getElementById("pSearcWord").innerHTML= keyword.toString();   //to show the key word on the page
-  document.getElementById("pSearcWord").value= keyword.toString();   //to show the key word on the page
+  document.getElementById("pSearcWord").innerHTML= keyword.toString();   //to show the key word on the page 
 
   $(document).ready(function(){   
    
@@ -65,15 +51,17 @@ function setMovieList(keyword)
                           
               if(item.Poster != 'N/A')
               {
-                movieText += "<div class='card'><div class='card-image-box'> <img class='card-image' src='" + item.Poster + "'></div>"+
-                "<div class='card-description'>"+
-                "<a href='DetailPage.html?movieID="+ item.imdbID  +"'><p class='card-title'>"+ item.Title +"</p></a>"+            
-                "<p><span class='topic'>Type: </span> &nbsp;"+ item.Type +"</p>"+ 
-                "<p><span class='topic'>Year: </span> &nbsp;"+ item.Year +"</p></div></div>";            
+                movieText += "<div class='card'><div class='card-image-box'> <img class='card-image' src='" + item.Poster + "'></div>"
+               
               }
               else{
-                movieText += "<div class='card-image-box'> <img class='card-image' src='/images/No_image_available.png'></div>";
+                movieText += "<div class='card'><div class='card-image-box'> <img class='card-image' src='../Images/No_image_available.png'></div>";
               }
+
+              movieText += "<div class='card-description'>"+
+              "<a href='DetailPage.html?movieID="+ item.imdbID  +"'><p class='card-title'>"+ item.Title +"</p></a>"+            
+              "<p><span class='topic'>Type: </span> &nbsp;"+ item.Type +"</p>"+ 
+              "<p><span class='topic'>Year: </span> &nbsp;"+ item.Year +"</p></div></div>";            
                          
             });
   
