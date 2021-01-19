@@ -5,18 +5,19 @@ function setPageInfo()
   var url = document.location.search;
   var urlList = url.split('=');  //“=” means obtain the value efter the symbol "=" 
   var keyword = urlList[urlList.length-1].split('.')[0];
+  setMovieList(keyword.trim()); 
 
-  var sWord = document.getElementById("pSearcWord");
+  console.log(document.getElementById("pSearcWord").innerHTML);
 
-  console.log(sWord.value);
-
-  if(sWord.value!='')
+  /*
+  if(sWord.innerHTML!='')
   {
     setMovieList(keyword.trim());  
   }
   else{
-    setMovieList(sWord.value);
+    setMovieList(sWord.innerHTML);
   }
+  */
    
 }  
 
@@ -27,6 +28,8 @@ function searchMovie()
 
   setMovieList(keyWord);
   txtKey.value="";
+
+  document.getElementById("pSearcWord").value = keyWord;
 }
 
 function setMovieList(keyword)
