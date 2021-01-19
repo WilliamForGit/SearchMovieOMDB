@@ -45,6 +45,8 @@ body{
 .divContainer input[type='text']{
     width: 80%; 
     border-radius: 20px 0 0 20px;
+    font-size: 20px;
+    height: 50px;
 }
 
 .divContainer button{
@@ -55,7 +57,7 @@ body{
     padding: 10px;
     height: 50px;
     color: white;
-    font-size: 17px;
+    font-size: 20px;
     border: 1px solid grey;
     border-left: none;
     cursor: pointer;
