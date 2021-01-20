@@ -28,50 +28,43 @@ body{
     margin: auto;
     text-align: center;
     position: absolute;
-    top: 40%;
-    left: 50%;
-    transform: translate(-50%, -40%);
+    top: 30%;    
     text-align: center;
-    font-weight: 600;
+    font-weight: 500;
     font-family: Georgia, serif; 
     text-shadow: 2px 2px 2px black;
 }
 
 .divContainer p{
     margin: 20px 0;
-    font-size: 2.4rem;
+    font-size: 2rem;    
 }
 
-.divContainer input[type='text']{
-    width: 80%; 
+.divContainer input{
+    outline: none;
+    border: none;
+    height: 48px;
+    margin: 0;
+    padding-left: 20px;
+    padding-right: 0;
+    font-family: 'Montserrat', sans-serif;
+    width: 60%; 
     border-radius: 20px 0 0 20px;
-    font-size: 20px;
-    height: 50px;
+    font-size: 20px;    
 }
 
 .divContainer button{
-    border-radius: 0 20px 20px 0;
-    
-    float: left;
-    width: 20%;
-    padding: 10px;
+    border-radius: 0 20px 20px 0;         
     height: 50px;
     color: white;
-    font-size: 20px;
-    border: 1px solid grey;
-    border-left: none;
+    font-size: 20px;   
     cursor: pointer;
     background: rgb(2, 45, 70);
     width: 10%;
+    outline: none;
+    border: none;
 }
 
-.divContainer input[type='submit']:hover{
-    background: rgba(2, 39, 75, 0.774);
-}
-
-.divContainer input[type='submit']:active{
-    background:  rgba(2, 39, 75, 0.774);
-}
 
 form{
     overflow: hidden;
@@ -80,31 +73,15 @@ form{
     width: 50%;
 }
 
-.divContainer input{
-    outline: none;
-    border: none;
-    height: 50px;
-    margin: 0;
-    padding: 0 20px;
-    float: left;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 1.2rem;
-}
-
-
 .logo{
     font-family: 'MuseoModerno', cursive;
     position: absolute;
     font-size: 30px;
     top:0;
     left:0;
-    padding: 2%;
-    cursor: pointer;
-}
-
-a{
-    text-decoration: none;
+    padding: 2%;   
     color: white;
+    text-decoration: none;
 }
 
 /*
@@ -118,12 +95,12 @@ handle the layout in different size of browser
 
     form{
         width: 90%;
-    }
+    }      
 
 }
 
 @media(max-width: 1100px){
-    .divContainer input[type='text']{
+    .divContainer input{
         width: 60%;
     } 
     .divContainer button{

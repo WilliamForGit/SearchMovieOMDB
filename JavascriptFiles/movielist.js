@@ -4,7 +4,7 @@ function setPageInfo()
 {   
   var url = document.location.search;
   var urlList = url.split('=');  //“=” means obtain the value efter the symbol "=" 
-  var keyword = urlList[urlList.length-1].split('.')[0];
+  var keyword = urlList[urlList.length-1].split('.')[0];  //to get the search word
 
   setMovieList(keyword.trim()); 
 }  
@@ -60,7 +60,7 @@ function setMovieList(keyword)
                 movieText += "<img class='movie-image' src='" + item.Poster + "'></div>";               
               }
               else{
-                movieText += "<img class='noImage' src='/SearchMovieOMDB/Images/noImage.png'></div>";
+                movieText += "<img class='noImage' src='/SearchMovieOMDB/Images/noImage.png'></div>";  //if there no image-path in the API response
               }
 
               movieText += "<div class='movie-description'>"+

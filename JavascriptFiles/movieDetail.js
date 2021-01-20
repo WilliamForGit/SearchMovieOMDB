@@ -22,7 +22,7 @@ var movieDirector = document.getElementById("pDirector");
 var movieActors = document.getElementById("pActors");
 
 
-  var APIKEY = 'ced10e13';
+  var APIKEY = 'ced10e13';  //This is my own OMDB API Key
   $(document).ready(function(){   
      
     var URL = "http://www.omdbapi.com/?apikey="+APIKEY+"&i="+movieID;
