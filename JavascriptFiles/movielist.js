@@ -5,24 +5,29 @@ function setPageInfo()
   var url = document.location.search;
   var urlList = url.split('=');  //“=” means obtain the value efter the symbol "=" 
   var keyword = urlList[urlList.length-1].split('.')[0];
+
   setMovieList(keyword.trim()); 
 }  
 
 function searchMovie()
 {
   var txtKey =  document.getElementById("txtKeyWord");
-  var keyWord = txtKey.value;
-
-  setMovieList(keyWord);
-  txtKey.value="";
-
-  document.getElementById("pSearcWord").value = keyWord;
+  if(txtKey.value == "" || txtKey.value == null)
+  {
+    alert("Please enter en key word for search!");
+  }
+  else
+  {
+    //setMovieList(keyWord);  //It is battre use replace ,because when the use using back navigation on the browser.
+    window.location.replace("/SearchMovieOMDB/SearchPage.html?movie="+txtKey.value);
+  }
+ 
 }
 
 function setMovieList(keyword)
 {
   var APIKEY = 'ced10e13';  //this is a my own API KEY for OMDB
-  document.getElementById("pSearcWord").innerHTML= keyword.toString();   //to show the key word on the page 
+  document.getElementById("pSearcWord").innerHTML= keyword.toString();   //to show the key word on the page   
 
   $(document).ready(function(){   
    

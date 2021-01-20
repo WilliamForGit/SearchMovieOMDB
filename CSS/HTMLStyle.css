@@ -16,7 +16,7 @@ body{
     grid-row-gap: 80px;
     justify-items: center;  /*horizontal center item inside grid*/
     position: absolute;
-    top: 100px;
+    top: 80px;
     left: 50%;
     transform: translateX(-50%);
 }
@@ -39,19 +39,6 @@ body{
     transform: scale(1.1);
 }
 
-
-/* Movie Image */
-.card-image{
-    width: 100%;
-    vertical-align: middle;
-    object-fit: cover;
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    max-width: 600px;
-    transition: transform 0.4s;
-}
-
 /* Image container */
 .card-image-box{
     width: 100%;
@@ -61,13 +48,25 @@ body{
     background: black;
 }
 
+/* Movie Image */
+.card-image{
+    width: 100%;
+    vertical-align: middle;
+    object-fit: cover;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    max-width: 380px;
+    transition: transform 0.4s;
+}
+
 /* Movie title */
 .card-description{
     margin:0;
     color: rgba(255, 255, 255, 0.692);
     padding: 0px 15px;
     letter-spacing: 0.8px;
-    font-weight: 300;
+    font-weight: 280;
 }
 
 .card-description .topic{
