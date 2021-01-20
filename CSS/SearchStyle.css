@@ -27,39 +27,31 @@ body{
 
 
 #headbar .searchMovie{
-    font-size: 1.3rem;
+    
     position: relative;
     display: inline-block;
-    margin: 0;
-   
+    margin: 0;   
 }
 
 #headbar .searchKeyWord{
-    widows: 200px;
-    height: 40px;
+    width: 300px;
+    height: 38px;
     border-radius:  20px 0 0 20px;      
     outline: none;
     border: none;
-    font-size: 20px;
+    font-size: 15px;
     padding-left: 20px;
 }
 
 #headbar button{
-    width: 80px;
+    width: 50px;
     height: 40px;
     border-radius: 0 20px 20px 0;   
     border: none;   
     outline: none;
-    font-size: 20px;
+    font-size: 15px;
 }
 
-::placeholder{
-    color: rgba(255, 255, 255, 0.527);
-}
-
-#headbar button:active{
-    box-shadow: 0px 0px 0px #FFF;
-}
 
 .divRWord{
     text-align: left; 
