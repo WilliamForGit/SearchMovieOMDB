@@ -27,12 +27,11 @@
     display: inline-block;
     margin: 0;
     top: 50%;
-    transform: translateY(-50%);
-    
+    transform: translateY(-50%);    
 }
 
 #headbar .searchKeyWord{
-    width: 30%;
+    widows: 200px;
     height: 40px;
     border-radius:  20px 0 0 20px;      
     outline: none;

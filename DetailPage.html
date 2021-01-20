@@ -8,10 +8,13 @@
   
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
   <link rel="stylesheet" type="text/css" href="CSS/HTMLStyle.css">
   <link rel="stylesheet" type="text/css" href="CSS/Layout.css">
   <link rel="stylesheet" type="text/css" href="CSS/ResponsivLayout.css">
+  <link rel="stylesheet" type="text/css" href="CSS/detailStyle.css">
+
 </head>
 
 <body onload="setMovieInfo()">
@@ -22,29 +25,25 @@
 </header>
 
 <section class="col-12 col-s-12" style="text-align: center;">      
- 
-    <div>
-        <div>             
-            <img id="imgPicture" class="main-image" src="" onerror="this.src ='https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQkmpiE3saxLv17jlQVpffuUAAtU95HJoaPRw&usqp=CAU'">
-        
-            <div class="movie-details"> 
-                <p id="pTitle" class="movie-title"></p>   
-                <div class="movie-inside">
-                    <p id="pRating" class="card-rating"><span id="topic">IMDB rating: </span><i class="fas fa-star"></i> <span class="rating"></span></p>
-                    <p id="pType" class="movie-type">Type: &nbsp;</p>
-                    <p id="pGenre" class="movie-genre">Genre: &nbsp;</p>
-                    <p id="pLanguage" class="movie-lang">Language: &nbsp;</p>
-                    <span id="topic">Plot:</span><br><p id="plot" class="movie-plot"></p>
-                    <p id="pReleaseDate" class="movie-release">Release date: &nbsp;</p>
-                    <p id="pDirector" class="movie-director">Director: &nbsp;</p>
-                    <p id="pActors" class="movie-cast">Actors: &nbsp;</p>
-                </div> 
-                     
-            </div>
-        </div>
-        
-        
+
+  <div>             
+    <img id="imgPicture" src="" onerror="this.src ='https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQkmpiE3saxLv17jlQVpffuUAAtU95HJoaPRw&usqp=CAU'">
+
+    <div class="movie-data"> 
+        <p id="pTitle" class="movie-title"></p>   
+        <div class="movie-detail">
+            <p id="pRating"></p>
+            <p id="pType"></p>
+            <p id="pGenre"></p>
+            <p id="pLanguage"></p>            
+            <p id="pReleaseDate"></p>
+            <p id="pDirector"></p>
+            <p id="pActors"></p>
+            <p id="plot" class="movie-plot"></p>
+        </div> 
+              
     </div>
+  </div>
 
   <p id="pError"></p>
 

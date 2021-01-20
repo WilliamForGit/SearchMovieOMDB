@@ -13,7 +13,6 @@ function setMovieDetail(movieID)
 var movieImage = document.getElementById("imgPicture");
 var movieTitle = document.getElementById("pTitle");
 var movieRating = document.getElementById("pRating");
-
 var movieType = document.getElementById("pType");
 var movieGenre =document.getElementById("pGenre");
 var movieLanguage = document.getElementById("pLanguage");
@@ -45,14 +44,14 @@ var movieActors = document.getElementById("pActors");
            else{                      
             movieImage.setAttribute('src', data.Poster);
             movieTitle.textContent = data.Title;
-            movieRating.textContent = data.imdbRating; 
-            movieType.innerHTML ="<span id='topic'>Type:</span> &nbsp;" + data['Type'];
-            movieLanguage.innerHTML = "<span id='topic'>Language:</span> &nbsp;" + data['Language'];
-            movieGenre.innerHTML = "<span id='topic'>Genre:</span> &nbsp;" + data['Genre'];
-            moviePlot.innerHTML = data['Plot'];
-            movieReleaseDate.innerHTML = "<span id='topic'>Release Date:</span> &nbsp;" + data['Released'];
-            movieDirector.innerHTML = "<span id='topic'>Director:</span> &nbsp;" + data['Director'];
-            movieActors.innerHTML = "<span id='topic'>Actors:</span> &nbsp;" + data['Actors'];
+            movieRating.innerHTML = "<span>Rating:</span> &nbsp;" + data.imdbRating; 
+            movieType.innerHTML ="<span>Type:</span> &nbsp;" + data['Type'];
+            movieLanguage.innerHTML = "<span>Language:</span> &nbsp;" + data['Language'];
+            movieGenre.innerHTML = "<span>Genre:</span> &nbsp;" + data['Genre'];            
+            movieReleaseDate.innerHTML = "<span>Release Date:</span> &nbsp;" + data['Released'];
+            movieDirector.innerHTML = "<span>Director:</span> &nbsp;" + data['Director'];
+            movieActors.innerHTML = "<span>Actors:</span> &nbsp;" + data['Actors'];
+            moviePlot.innerHTML = "<span>Plot:</span> &nbsp;" + data['Plot'];
 
           }
           

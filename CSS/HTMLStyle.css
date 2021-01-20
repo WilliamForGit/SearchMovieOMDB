@@ -1,6 +1,6 @@
 body{
-    width: 100%;
-    height: 100%;
+    width: 99%;
+    height: 99%;
     background: rgb(11, 31, 85);
     font-family: 'Montserrat', sans-serif;
     color: white;    
@@ -67,27 +67,20 @@ body{
     padding: 0px 15px;
     letter-spacing: 0.8px;
     font-weight: 280;
+
+    text-align: left;
 }
 
 .card-description .topic{
     font-weight: 500;
     color: rgba(255, 255, 255, 0.822);
-}
-
-.rating{
-    color: rgb(10, 177, 10);
-    font-weight: 500;
-    text-shadow: 1px 1px 0.7px rgba(0, 0, 0, 0.808);
-}
-
-.card-rating i{
-    color: rgba(255, 217, 0, 0.74);
+    text-align: left;
 }
 
 .card-title{
-    text-align: center;
-    font-size: 1.4rem;
-    font-weight: 500;
+    text-align: left;
+    font-size: 1.2rem;
+    font-weight: 450;
     color: white;
     transition: all 0.4s;
 }
@@ -97,41 +90,9 @@ body{
     cursor: pointer;
 }
 
-.heart{
-    font-size: 1.2rem;
-    font-weight: 300;
-    padding-left: 9px;
-    margin:0;
-    bottom: 20px;
-    position: absolute;
-    color: rgba(255, 255, 255, 0.466);
-    transition: all 0.3s;
-}
-
-
-.black-filter{
-    position: absolute; 
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.603);
-    opacity: 0;
-    transition: all 0.3s;
-    color: gray;
-    font-size: 3rem;
-}
-/* Center the eye icon in the middle */
-.black-filter p{
-    position: absolute;
-    top:30%;
-    left: 50%;
-    transform: translate(-50%,-30%);
-}
-
 a{
     text-decoration: none;
-    color: gray;
+    color: white;
 }
 
 /* to apply black filter with an eye element in middle */
