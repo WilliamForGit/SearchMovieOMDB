@@ -62,7 +62,6 @@ body{
     border-left: none;
     cursor: pointer;
     background: rgb(2, 45, 70);
-    transition: background 0.2s;
     width: 10%;
 }
 
@@ -108,6 +107,9 @@ a{
     color: white;
 }
 
+/*
+handle the layout in different size of browser
+*/
 @media(max-width: 750px){
     .logo{
         font-size: 20px;

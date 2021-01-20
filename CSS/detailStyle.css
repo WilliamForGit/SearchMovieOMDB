@@ -56,7 +56,9 @@ a{
     font-size: 15px;
 }
 
-
+/*
+handle the layout in different size of browser
+*/
 @media(max-width: 750px){
     .logo{
         font-size: 20px;
