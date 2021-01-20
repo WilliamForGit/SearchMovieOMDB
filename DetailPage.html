@@ -10,7 +10,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>  
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-  <link rel="stylesheet" type="text/css" href="CSS/HTMLStyle.css">
+
   <link rel="stylesheet" type="text/css" href="CSS/Layout.css">
   <link rel="stylesheet" type="text/css" href="CSS/ResponsivLayout.css">
   <link rel="stylesheet" type="text/css" href="CSS/detailStyle.css">
@@ -20,28 +20,27 @@
 <body onload="setMovieInfo()">
 
 <header>
-  <h2>Search movies from OMDB</h2>
+  <div class="logo"> <a href="/SearchMovieOMDB/HomePage.html">Search Movies From OMDB</a></div>
   
 </header>
 
-<section class="col-12 col-s-12" style="text-align: center;">      
+<section style="text-align: center;">      
 
-  <div>             
+  <div class="divMovie">             
     <img id="imgPicture" src="" onerror="this.src ='https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQkmpiE3saxLv17jlQVpffuUAAtU95HJoaPRw&usqp=CAU'">
 
     <div class="movie-data"> 
         <p id="pTitle" class="movie-title"></p>   
         <div class="movie-detail">
-            <p id="pRating"></p>
-            <p id="pType"></p>
-            <p id="pGenre"></p>
-            <p id="pLanguage"></p>            
-            <p id="pReleaseDate"></p>
-            <p id="pDirector"></p>
-            <p id="pActors"></p>
-            <p id="plot" class="movie-plot"></p>
-        </div> 
-              
+            <p>Rating(IMDB): &nbsp;<span id="pRating"></span></p>
+            <p>Type: &nbsp;<span id="pType"></span></p>
+            <p>Genre: &nbsp;<span id="pGenre"></span></p>
+            <p>Director: &nbsp;<span id="pDirector"></span></p>
+            <p>Language: &nbsp;<span id="pLanguage"></span></p>
+            <p>Release date: &nbsp;<span id="pReleaseDate"></span></p>  
+            <p>Actors: &nbsp;<span id="pActors"></span></p>            
+            <p>Plot: &nbsp; <span id="plot" class="movie-plot"></span></p>
+        </div>               
     </div>
   </div>
 

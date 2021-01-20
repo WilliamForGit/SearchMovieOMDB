@@ -44,15 +44,14 @@ var movieActors = document.getElementById("pActors");
            else{                      
             movieImage.setAttribute('src', data.Poster);
             movieTitle.textContent = data.Title;
-            movieRating.innerHTML = "<span>Rating:</span> &nbsp;" + data.imdbRating; 
-            movieType.innerHTML ="<span>Type:</span> &nbsp;" + data['Type'];
-            movieLanguage.innerHTML = "<span>Language:</span> &nbsp;" + data['Language'];
-            movieGenre.innerHTML = "<span>Genre:</span> &nbsp;" + data['Genre'];            
-            movieReleaseDate.innerHTML = "<span>Release Date:</span> &nbsp;" + data['Released'];
-            movieDirector.innerHTML = "<span>Director:</span> &nbsp;" + data['Director'];
-            movieActors.innerHTML = "<span>Actors:</span> &nbsp;" + data['Actors'];
-            moviePlot.innerHTML = "<span>Plot:</span> &nbsp;" + data['Plot'];
-
+            movieRating.innerHTML = data.imdbRating; 
+            movieType.innerHTML = data.Type;
+            movieGenre.innerHTML =  data.Genre;  
+            movieLanguage.innerHTML = data.Language;                       
+            movieReleaseDate.innerHTML = data.Released;
+            movieDirector.innerHTML =  data.Director;
+            movieActors.innerHTML =  data.Actors;
+            moviePlot.innerHTML = data.Plot;
           }
           
           }       

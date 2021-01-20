@@ -53,18 +53,18 @@ function setMovieList(keyword)
            }
            else{
              movieData.Search.forEach((item) => {  // movieData.Search is en JSON array from OMDB API
-                          
+
+              movieText += "<div class='movieCard'><div class='movie-image-box'>";
               if(item.Poster != 'N/A')
               {
-                movieText += "<div class='card'><div class='card-image-box'> <img class='card-image' src='" + item.Poster + "'></div>"
-               
+                movieText += "<img class='movie-image' src='" + item.Poster + "'></div>";               
               }
               else{
-                movieText += "<div class='card'><div class='card-image-box'> <img class='card-image' src='../Images/No_image_available.png'></div>";
+                movieText += "<img class='noImage' src='/SearchMovieOMDB/Images/noImage.png'></div>";
               }
 
-              movieText += "<div class='card-description'>"+
-              "<a href='DetailPage.html?movieID="+ item.imdbID  +"'><p class='card-title'>"+ item.Title +"</p></a>"+            
+              movieText += "<div class='movie-description'>"+
+              "<a href='DetailPage.html?movieID="+ item.imdbID  +"'><p class='movie-title'>"+ item.Title +"</p></a>"+            
               "<p><span class='topic'>Type: </span> &nbsp;"+ item.Type +"</p>"+ 
               "<p><span class='topic'>Year: </span> &nbsp;"+ item.Year +"</p></div></div>";            
                          

@@ -1,17 +1,43 @@
+body{
+    width: 99%;
+    height: 100%;
+    background: rgb(11, 31, 85);
+    font-family: 'Montserrat', sans-serif;
+    color: white;    
+}
+
+.divMovie
+{
+    padding-top: 5%;
+}
+
+.logo{
+    font-family: 'MuseoModerno', cursive;
+    position: absolute;
+    font-size: 30px;
+    top:0;
+    left:0;
+    padding: 2%;
+    cursor: pointer;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
 .movie-data{
     margin: auto;
     width: 60%;
     height: 100%;
     position: relative;
     padding: 0;
-    font-size: 20px;
-    top: 50%;
+    font-size: 20px;    
     color: rgba(255, 255, 255, 0.849);
     font-weight: 300;
     overflow: hidden;
-    letter-spacing: 0.8px;
-
     text-align: left;
+   
 }
 
 .movie-title{
@@ -28,4 +54,16 @@
 .movie-plot
 {    
     font-size: 15px;
+}
+
+
+@media(max-width: 750px){
+    .logo{
+        font-size: 20px;
+    }
+
+    .divMovie
+    {
+        padding-top: 10%;
+    }
 }

@@ -1,28 +1,18 @@
-body{
-    width: 99%;
-    height: 99%;
-    background: rgb(11, 31, 85);
-    font-family: 'Montserrat', sans-serif;
-    color: white;    
-}
-
 
 .container{
     display: grid;
-    width: 90vw;
-    margin: 50px auto;
+    width: 95%;  
+    margin: 45px auto;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     grid-column-gap: 50px;
-    grid-row-gap: 80px;
+    grid-row-gap: 60px;
     justify-items: center;  /*horizontal center item inside grid*/
     position: absolute;
-    top: 80px;
-    left: 50%;
-    transform: translateX(-50%);
+    top: 100px;   
 }
 
 /* Grid items */
-.card{
+.movieCard{
     width: 90%;
     height: 450px;
     margin: 0;
@@ -35,21 +25,21 @@ body{
 }
 
 /* Show hover effect for image while hover over card */
-.card:hover .card-image {
+.movieCard:hover .movie-image {
     transform: scale(1.1);
 }
 
 /* Image container */
-.card-image-box{
+.movie-image-box{
     width: 100%;
     overflow: hidden; 
     height: 300px;
     position: relative;
-    background: black;
+    
 }
 
 /* Movie Image */
-.card-image{
+.movie-image{
     width: 100%;
     vertical-align: middle;
     object-fit: cover;
@@ -60,8 +50,15 @@ body{
     transition: transform 0.4s;
 }
 
+.noImage
+{
+    width: 300px;
+    height: 300px;
+    background-repeat: no-repeat;    
+}
+
 /* Movie title */
-.card-description{
+.movie-description{
     margin:0;
     color: rgba(255, 255, 255, 0.692);
     padding: 0px 15px;
@@ -71,13 +68,13 @@ body{
     text-align: left;
 }
 
-.card-description .topic{
+.movie-description .topic{
     font-weight: 500;
     color: rgba(255, 255, 255, 0.822);
     text-align: left;
 }
 
-.card-title{
+.movie-title{
     text-align: left;
     font-size: 1.2rem;
     font-weight: 450;
@@ -85,7 +82,7 @@ body{
     transition: all 0.4s;
 }
 
-.card-title:hover{
+.movie-title:hover{
     text-decoration: underline;
     cursor: pointer;
 }
@@ -96,6 +93,6 @@ a{
 }
 
 /* to apply black filter with an eye element in middle */
-.card-image-box:hover .black-filter{
+.movie-image-box:hover .black-filter{
     opacity: 1;
 }
